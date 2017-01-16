@@ -21,6 +21,18 @@
   font-family: 'Raleway', sans-serif;
 }
 
+.subtitle {
+text-align: left;
+color: white;
+font-weight: bold;
+font-size: 50px;
+font-family: 'Raleway', sans-serif;
+max-height: 60px;
+width: 80%;
+margin: 10px auto;
+}
+
+
 .navbar ul {
     list-style-type: none;
     margin: 0;

@@ -9,7 +9,7 @@ All Artists
   @foreach ($artists as $artist)
 
 <ul>
-<li>{{$artist->name}}</li>
+  <l1><a href="/artist/{{$artist->id}}">{{$artist->name}}</a></li>
 </ul>
 
 
