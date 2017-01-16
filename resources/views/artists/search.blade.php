@@ -1,9 +1,10 @@
 @extends('layout')
 @section('content')
 
-  @foreach ($artist as $artists)
+  @foreach ($artists as $artist)
 
-<h1>{{$artists->name}}</h1>
+<h1><a href="/artist/{{$artist->id}}">{{$artist->name}}</a></h1>
+
 
 
 @endforeach
