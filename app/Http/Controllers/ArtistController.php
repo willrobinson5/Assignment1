@@ -9,7 +9,8 @@ class ArtistController extends Controller
 {
   public function index()
   {
-    return view ('artistPage');
+    $artists = Artist::all();
+    return view ('artists.all', compact('artists'));
   }
 
   public function search(Request $request){
@@ -22,4 +23,5 @@ class ArtistController extends Controller
 public function show(Artist $artist){
   return view('artists.info', compact('artist'));
 }
+
 }

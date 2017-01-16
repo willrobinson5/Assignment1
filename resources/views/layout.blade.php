@@ -13,6 +13,13 @@
         <!-- Styles -->
 
     </head>
+
+    <div class="navbar">
+      <ul>
+        <li> <a href="/">Home</a> </li>
+        <li> <a href="/artists">Artists</a> </li>
+      </ul>
+    </div>
     <body>
 
       @yield('content')

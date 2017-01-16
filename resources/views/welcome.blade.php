@@ -1,6 +1,6 @@
 @extends('layout')
 @section('content')
-<h1>The Welcome page goes here</h1>
+<div class="title">ArtistBase</div>
 <form method="POST" action="/artist/search">
 
   {{ csrf_field() }}
