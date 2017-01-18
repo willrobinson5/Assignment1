@@ -53,6 +53,11 @@ margin: 10px auto;
     text-decoration: none;
 }
 
+.searchBar {
+  padding-left: 600px;
+  padding-top: 10px;
+}
+
 a:hover:not(.active) {
     background-color: #111;
 }

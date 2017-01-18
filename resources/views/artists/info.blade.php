@@ -23,9 +23,11 @@
 <div class="container">
 @foreach ($artist->songs as $song)
 <li>{{$song->title}}</li>
+</ul>
 @endforeach
 </div>
-
-
+<div class = "deleteArtist" action="/welcome">
+   <button type="button">Delete</button>
+</div>
 
 @endsection

@@ -18,6 +18,17 @@
       <ul>
         <li> <a href="/">Home</a> </li>
         <li> <a href="/artists">Artists</a> </li>
+        <li> <a href="/add">Add</a> </li>
+        <li>
+          <div class="searchBar">
+
+          <form method="POST" action="/artist/search">
+            {{ csrf_field() }}
+            <input type="search" name="artist" placeholder="Search an artist">
+            <button name="submit">Search</button>
+          </form>
+          </div>
+        </li>
       </ul>
     </div>
     <body>
