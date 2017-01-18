@@ -1,7 +1,7 @@
 @extends('layout')
 @section('content')
   <div class="title">
-  Add a Song
+  Add an Artist
   </div>
 
   <div class="artistForm">
@@ -10,7 +10,7 @@
     {{ csrf_field() }}
     <input name="name" placeholder="Artist Name"></textarea>
     <input name="DOB" placeholder="Date of Birth"></textarea>
-    <input name="nationality" placeholder="Natioanlity"></textarea>
+    <input name="nationality" placeholder="Nationality"></textarea>
     <input name="about" placeholder="About">
     <button name="submit">Save</button>
   </form>

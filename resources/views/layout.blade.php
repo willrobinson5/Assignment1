@@ -18,7 +18,7 @@
       <ul>
         <li> <a href="/">Home</a> </li>
         <li> <a href="/artists">Artists</a> </li>
-        <li> <a href="/add">Add</a> </li>
+        <li> <a href="/addForm">Add</a> </li>
         <li>
           <div class="searchBar">
 

@@ -6,17 +6,38 @@
 <link ref="stylesheet" href="/css/style.css">
 
 <div class="title">
-{{$artist->name}}</br>
+  {{$artist->name}}</br>
+<div class="DOB">
+  {{$artist->DOB}}</br>
+</div>
 </div>
 
-  <div class="subtitle">
-    About
-  </div>
+<div class="buttons">
+  <div class="deleteButton">
+    <form method="POST" action="/artist/{{$artist->id}}/delete">
+      {{ csrf_field() }}
+    <button type="submit">Delete</button>
+  </form>
+    </div>
+    <div class="editButton">
+  <form method="POST" action="/artist/{{$artist->id}}/edit">
+    {{ csrf_field() }}
+  <button type="submit">Edit</button>
+</form>
+</div>
+</div>
+
+<div class="subtitle">
+  About
+</div>
+
+
+
 
 <div class="container">
-
 {{$artist->about}}
 </div>
+
 
 <div class="subtitle">Songs </div>
 
@@ -26,10 +47,7 @@
 </ul>
 @endforeach
 </div>
-<form method="POST" action="/artist/{{$artist->id}}/delete">
-  {{ csrf_field() }}
-   <button type="submit">Delete</button>
- </form>
-</div>
+
+
 
 @endsection
