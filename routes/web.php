@@ -5,3 +5,4 @@ Route::get('/artist/{artist}', 'ArtistController@show');
 Route::get('/artists', 'ArtistController@index');
 Route::get('/add', 'AddController@addSong');
 Route::post('/artist/add', 'AddController@addArtist');
+Route::post('/artist/{artist}/delete', 'AddController@deleteArtist');

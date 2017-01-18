@@ -26,8 +26,10 @@
 </ul>
 @endforeach
 </div>
-<div class = "deleteArtist" action="/welcome">
-   <button type="button">Delete</button>
+<form method="POST" action="/artist/{{$artist->id}}/delete">
+  {{ csrf_field() }}
+   <button type="submit">Delete</button>
+ </form>
 </div>
 
 @endsection

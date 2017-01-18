@@ -4,7 +4,7 @@
   Add a Song
   </div>
 
-  <div class="songForm">
+  <div class="artistForm">
 
   <form method="POST" action="/artist/add">
     {{ csrf_field() }}

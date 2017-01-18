@@ -27,4 +27,12 @@ public function addArtist(Request $request){
 
     return view('artists.all' , compact('artists'));
  }
+
+ public function deleteArtist(Request $request, Artist $artist){
+
+   $artist->delete($request->all());
+
+   $artists = Artist::all();
+     return view('artists.all' , compact('artists'));
+  }
 }
