@@ -14,3 +14,11 @@ Route::patch('/artist/{artist}/update', 'ArtistController@update');
 Route::post('/song/{artist}/addSongForm', 'SongController@addSongForm');
 Route::post('/song/{artist}/addSong', 'SongController@addSong');
 Route::post('/song/{song}/delete', 'SongController@deleteSong');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');

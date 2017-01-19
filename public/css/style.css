@@ -103,6 +103,7 @@ width: 80%;
 margin: 10px auto;
 }
 
+
 .DOB {
   text-align: center;
   font-size: 50px;
@@ -147,7 +148,18 @@ a:hover:not(.active) {
 
 .container li {
   list-style: none;
+  display: block;
 }
+
+.container .form .X button {
+  background-color: #F2F1EF;
+border: none;
+color: red;
+float: right;
+margin: -20px 0px;
+display: block;
+}
+
   .container{
   padding: 15px;
   background-color: #F2F1EF;
@@ -157,6 +169,7 @@ a:hover:not(.active) {
   width: 80%;
   text-align: center;
   margin: 10px auto;
+  display: block;
   }
 
     .flex-center {
