@@ -49,7 +49,11 @@
 
 <div class="container">
 @foreach ($artist->songs as $song)
-<li>{{$song->title}}</li>
+<li>{{$song->title}}
+   <form method="POST" action="/song/{{$song->id}}/delete">
+    {{ csrf_field() }}
+    <button name="submit">X</button>
+  </form></li>
 </ul>
 @endforeach
 </div>

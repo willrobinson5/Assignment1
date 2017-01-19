@@ -13,3 +13,4 @@ Route::patch('/artist/{artist}/update', 'ArtistController@update');
 //Song routes
 Route::post('/song/{artist}/addSongForm', 'SongController@addSongForm');
 Route::post('/song/{artist}/addSong', 'SongController@addSong');
+Route::post('/song/{song}/delete', 'SongController@deleteSong');

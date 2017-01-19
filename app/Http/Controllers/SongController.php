@@ -27,4 +27,23 @@ public function addSong(Request $request, Artist $artist){
 
     return view('artists.info' , compact('artist'));
  }
+
+ public function deleteSong(Request $request, Song $song){
+   $song->delete($request->all());
+
+   //$song = Song::all();
+
+   return view('song.deleted' , compact('song'));
+ }
 }
+
+
+
+
+ // public function deleteArtist(Request $request, Artist $artist){
+ //
+ //   $artist->delete($request->all());
+ //
+ //   $artists = Artist::all();
+ //     return view('artists.info' , compact('artists'));
+ //  }
