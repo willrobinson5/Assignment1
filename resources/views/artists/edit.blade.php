@@ -2,7 +2,7 @@
 @section('content')
   <link ref="stylesheet" href="/css/style.css">
   <div class="title">
-    Edit information for {{$artist->name}}</br>
+    Edit information for </br>{{$artist->name}}</br>
   </div>
 
 <div class="formStyle">

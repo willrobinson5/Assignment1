@@ -19,10 +19,16 @@
     <button type="submit">Delete</button>
   </form>
     </div>
+
     <div class="editButton">
   <form method="POST" action="/artist/{{$artist->id}}/edit">
     {{ csrf_field() }}
   <button type="submit">Edit</button>
+</form>
+
+<form method="POST" action="/song/{{$artist->id}}/addSongForm">
+  {{ csrf_field() }}
+<button type="submit">Add a Song</button>
 </form>
 </div>
 </div>

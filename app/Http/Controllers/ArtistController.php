@@ -16,17 +16,16 @@ class ArtistController extends Controller
 
   public function search(Request $request){
     $search = $request->artist;
-
     $artists = Artist::where('name', 'LIKE', "$search")->get();
-
     return view('artists.search', compact('artists'));
 }
 public function show(Artist $artist){
   return view('artists.info', compact('artist'));
 }
-public function addForm(){
+public function addArtistForm(){
   return view('artists.addArtist');
 }
+
 public function addArtist(Request $request){
 
     $artist = new Artist;
