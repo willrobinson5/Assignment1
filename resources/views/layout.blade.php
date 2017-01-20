@@ -48,6 +48,7 @@
 
           <form method="POST" action="/artist/search">
             {{ csrf_field() }}
+
             <input type="search" name="artist" placeholder="Search an artist">
             <button name="submit">Search</button>
           </form>

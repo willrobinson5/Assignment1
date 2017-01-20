@@ -11,7 +11,8 @@
   {{$artist->DOB}}</br>
 </div>
 </div>
-
+@if (Auth::guest())
+@else
 <div class="buttons">
   <div class="deleteButton">
     <form method="POST" action="/artist/{{$artist->id}}/delete">
@@ -20,10 +21,11 @@
   </form>
     </div>
 
+
     <div class="editButton">
   <form method="POST" action="/artist/{{$artist->id}}/edit">
     {{ csrf_field() }}
-  <button type="submit">Edit</button>
+  <button type="submit">Edit Artist</button>
 </form>
 
 <form method="POST" action="/song/{{$artist->id}}/addSongForm">
@@ -32,7 +34,7 @@
 </form>
 </div>
 </div>
-
+  @endif
 <div class="subtitle">
   About
 </div>
@@ -46,19 +48,21 @@
 
 
 <div class="subtitle">Songs </div>
-
 <div class="container">
 @foreach ($artist->songs as $song)
-<li>{{$song->title}}
+<li>{{$song->title}} - added by: {{$song->user->name}}
+@if (Auth::guest())
+@elseif (Auth::user()->id == $song->user->id)
    <form class="form" method="POST" action="/song/{{$song->id}}/delete">
     {{ csrf_field() }}
     <div class = "X">
-
     <button type="submit" name="submit">X</button>
 
   </div>
+@endif
   </form></li>
 </ul>
 @endforeach
 </div>
+
 @endsection

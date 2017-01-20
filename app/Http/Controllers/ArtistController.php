@@ -14,11 +14,12 @@ class ArtistController extends Controller
     return view ('artists.all', compact('artists'));
   }
 
+
   public function search(Request $request){
+    // $artist_select = DB::table('artist')->orderBy('name', 'asc')->lists('name','id');
     $search = $request->artist;
     $artists = Artist::where('name', 'LIKE', "$search")->get();
-    return view('artists.search', compact('artists'));
-}
+    return view('artists.search', compact('artists'));}
 public function show(Artist $artist){
   return view('artists.info', compact('artist'));
 }
