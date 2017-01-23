@@ -14,6 +14,24 @@ class ExampleTest extends TestCase
     public function testBasicExample()
     {
         $this->visit('/')
-             ->see('Laravel');
+             ->see('welcome');
+    }
+
+    public function testAddArtist()
+    {
+      $this->visit('/login')
+            ->type('will@will.com', 'email')
+            ->type('password', 'password')
+            ->press('Login')
+            ->seePageIs('/');
+
+    $this->visit('/addArtistForm')
+        ->type('Will Robinson', 'name')
+        ->type('07.03.1995', 'DOB')
+        ->type('British', 'nationality')
+        ->type('Test about', 'about')
+        ->press('Save')
+        ->seePageIs('artist/add');
+
     }
 }

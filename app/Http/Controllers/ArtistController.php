@@ -18,7 +18,7 @@ class ArtistController extends Controller
   //search the artist table for where the name of the artist equals the input in the search box
   public function search(Request $request){
     $search = $request->artist;
-    $artists = Artist::where('name', 'LIKE', "$search")->get();
+    $artists = Artist::where('name', 'LIKE', "%$search%")->get();
 
     return view('artists.search', compact('artists'));}
 

@@ -41,13 +41,15 @@
   <ul>
     <li> <a href="/">Home</a> </li>
     <li> <a href="/artists">Artists</a> </li>
+    @if (Auth::guest())
+    @else
     <li> <a href="/addArtistForm">Add Artist</a> </li>
-
+  @endif
     <li>
       {{--Creates the search bar on the homepage--}}
       <div class="searchBar">
         <form method="POST" action="/artist/search">
-          {{ csrf_field() }} 
+          {{ csrf_field() }}
           <input type="search" name="artist" placeholder="Search an artist">
           <button name="submit">Search</button>
         </form>

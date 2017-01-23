@@ -37,6 +37,7 @@ class SongController extends Controller
   public function deleteSong(Request $request, Song $song){
     $song->delete($request->all());
     //$song = Song::all();
+
     return view('song.deleted' , compact('song'));
   }
 }
