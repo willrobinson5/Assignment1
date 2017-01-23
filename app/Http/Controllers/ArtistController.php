@@ -19,6 +19,7 @@ class ArtistController extends Controller
   public function search(Request $request){
     $search = $request->artist;
     $artists = Artist::where('name', 'LIKE', "$search")->get();
+
     return view('artists.search', compact('artists'));}
 
   //shows the information about the artist clicked from the search results.

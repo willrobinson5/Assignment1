@@ -6,30 +6,31 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateSongsTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
-    public function up()
-    {
-        Schema::create('songs', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('user_id')->unsigned()->index();
-            $table->integer('artist_id')->unsigned()->index();
-            $table->string('title');
-            $table->integer('length');
-            $table->timestamps();
-        });
-    }
+  /**
+  * Run the migrations.
+  *
+  * @return void
+  */
+  /*Creates the songs columns*/
+  public function up()
+  {
+    Schema::create('songs', function (Blueprint $table) {
+      $table->increments('id');
+      $table->integer('user_id')->unsigned()->index();
+      $table->integer('artist_id')->unsigned()->index();
+      $table->string('title');
+      $table->integer('length');
+      $table->timestamps();
+    });
+  }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
-    public function down()
-    {
-        Schema::dropIfExists('songs');
-    }
+  /**
+  * Reverse the migrations.
+  *
+  * @return void
+  */
+  public function down()
+  {
+    Schema::dropIfExists('songs');
+  }
 }
