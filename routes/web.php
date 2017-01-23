@@ -15,6 +15,7 @@ Route::post('/song/{artist}/addSongForm', 'SongController@addSongForm');
 Route::post('/song/{artist}/addSong', 'SongController@addSong');
 Route::post('/song/{song}/delete', 'SongController@deleteSong');
 
+//Login routes
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');

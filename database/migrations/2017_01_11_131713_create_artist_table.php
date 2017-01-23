@@ -11,6 +11,7 @@ class CreateArtistTable extends Migration
      *
      * @return void
      */
+     //Creates the columns in the artists table
     public function up()
     {
         Schema::create('artists', function (Blueprint $table) {
