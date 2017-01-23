@@ -4,7 +4,7 @@
 
   {{-- <h1><a href="artist/{{$artists->id}}">{{$artists->name}}</a></h1> --}}
   <link ref="stylesheet" href="/css/style.css">
-  <script src="/js/openCity.js" type="text/javascript"></script>
+  <script src="/js/openTab.js" type="text/javascript"></script>
 
   <div class="title">
     {{$artist->name}}</br>
